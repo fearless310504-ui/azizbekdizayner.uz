@@ -1,1 +1,503 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azizbek Abdunazarov | Grafika Dizayner Portfoliosi</title>
+    <meta name="description" content="Grafika dizayner Azizbek Abdunazarov professional ish namunalari: SMD postlar, logotiplar va kreativ dizaynlar.">
+    <meta name="keywords" content="grafik dizayn, portfolio, Azizbek dizayn, SMD post tayyorlash, logo yaratish, Azizbek Abdunazarov">
+    <meta name="author" content="Azizbek Abdunazarov">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        /* Gold Glow Text */
+        .gold-glow-text {
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.6),
+                         0 0 30px rgba(255, 215, 0, 0.4),
+                         0 0 40px rgba(255, 215, 0, 0.3);
+        }
+        
+        /* Gold Gradient */
+        .gold-gradient {
+            background: linear-gradient(135deg, #ffd700, #ffed4e, #ffa500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Navbar Glass Effect */
+        .navbar-glass {
+            background: rgba(15, 12, 41, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 4px 30px rgba(255, 215, 0, 0.1);
+        }
+        
+        /* Card Glow Effect */
+        .card-glow {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            transition: all 0.4s ease;
+        }
+        
+        .card-glow:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+            border-color: rgba(255, 215, 0, 0.5);
+        }
+        
+        /* Button Glow */
+        .btn-glow {
+            background: linear-gradient(135deg, #ffd700, #ffa500);
+            color: #000;
+            font-weight: 700;
+            padding: 14px 32px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn-glow:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.6);
+        }
+        
+        /* Profile Image Glow */
+        .profile-glow {
+            box-shadow: 0 0 60px rgba(255, 215, 0, 0.5);
+            border: 4px solid rgba(255, 215, 0, 0.4);
+            border-radius: 50%;
+            animation: pulse-glow 3s infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 60px rgba(255, 215, 0, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 80px rgba(255, 215, 0, 0.8);
+            }
+        }
+        
+        /* Floating Animation */
+        .float {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #ffd700;
+            border-radius: 50%;
+            animation: particle-float 10s infinite;
+            opacity: 0.5;
+        }
+        
+        @keyframes particle-float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translateY(-100px) translateX(50px);
+                opacity: 1;
+            }
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #0f0c29;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #ffd700, #ffa500);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #ffed4e, #ffd700);
+        }
+        
+        /* Section Spacing */
+        section {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
 
+    <!-- Navbar -->
+    <nav class="navbar-glass fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="text-2xl font-bold gold-glow-text">
+                    <i class="fas fa-gem mr-2"></i>Azizbek
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#asosiy" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Asosiy</a>
+                    <a href="#haqimda" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Haqimda</a>
+                    <a href="#ishlarim" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Ishlarim</a>
+                    <a href="#aloqa" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Aloqa</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-yellow-400">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-3">
+                <a href="#asosiy" class="block text-gray-300 hover:text-yellow-400 transition-colors duration-300">Asosiy</a>
+                <a href="#haqimda" class="block text-gray-300 hover:text-yellow-400 transition-colors duration-300">Haqimda</a>
+                <a href="#ishlarim" class="block text-gray-300 hover:text-yellow-400 transition-colors duration-300">Ishlarim</a>
+                <a href="#aloqa" class="block text-gray-300 hover:text-yellow-400 transition-colors duration-300">Aloqa</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="asosiy" class="min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-20">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-black mb-6">
+                        Salom, Men <span class="gold-gradient">Azizbek</span>
+                    </h1>
+                    <h2 class="text-3xl md:text-4xl mb-6 text-gray-300">Grafik Dizayner</h2>
+                    <p class="text-lg text-gray-400 mb-8 leading-relaxed">
+                        Zamonaviy hamma turdagi dizaynlarni qilishda professional grafik dizayner. Sizning biznesingizni yangi darajaga ko'taraman.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#ishlarim" class="btn-glow">
+                            <i class="fas fa-briefcase mr-2"></i>Mening Ishlarim
+                        </a>
+                        <a href="#aloqa" class="px-8 py-3 border-2 border-yellow-400 rounded-full text-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300 font-semibold">
+                            <i class="fas fa-phone mr-2"></i>Bog'lanish
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="float">
+                        <img src="azizbek.jpg" alt="Azizbek" class="w-80 h-80 md:w-96 md:h-96 rounded-full object-cover profile-glow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="haqimda" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">
+                    <span class="gold-gradient">Men Nima Qilaman?</span>
+                </h2>
+                <p class="text-xl text-gray-400">Professional dizayn xizmatlari</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-glow p-8 text-center">
+                    <div class="mb-6">
+                        <img src="icon1.png" alt="SMD" class="w-20 h-20 mx-auto">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-yellow-400">SMD Postlar</h3>
+                    <p class="text-gray-400">Ijtimoiy tarmoqlarga barcha turdagi sifatli dizaynlar qilish tajribasiga egaman</p>
+                </div>
+                
+                <div class="card-glow p-8 text-center">
+                    <div class="mb-6">
+                        <img src="icon2.avif" alt="Logo" class="w-20 h-20 mx-auto">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-yellow-400">Logo Dizayn</h3>
+                    <p class="text-gray-400">Barcha turdagi logolarni mukammal ko'rinadigan tarzda yarataman</p>
+                </div>
+                
+                <div class="card-glow p-8 text-center">
+                    <div class="mb-6">
+                        <img src="icon4.png" alt="Marketing" class="w-20 h-20 mx-auto">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-yellow-400">Sotuv Dizaynlar</h3>
+                    <p class="text-gray-400">Barcha mahsulotlar uchun professional dizaynlar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="ishlarim" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">
+                    Mening <span class="gold-gradient">Qilgan Ishlarim</span>
+                </h2>
+                <p class="text-xl text-gray-400">Professional loyihalar portfoliosi</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="card-glow overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="image1.jpg" alt="Loyiha 1" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-yellow-400">Uzum market uchun mahsulot dizayni</h3>
+                        <p class="text-gray-400 mb-4">Uzum market uchun infografika mahsulot uchun</p>
+                        <a href="image1.jpg" target="_blank" class="btn-glow text-sm w-full text-center">
+                            <i class="fas fa-eye mr-2"></i>Ko'rish
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card-glow overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="image2.jpg" alt="Loyiha 2" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-yellow-400">Instagram reels uchun cover</h3>
+                        <p class="text-gray-400 mb-4">Qahramon Sayyid instagram kanali uchun yasalgan reels cover</p>
+                        <a href="image2.jpg" target="_blank" class="btn-glow text-sm w-full text-center">
+                            <i class="fas fa-eye mr-2"></i>Ko'rish
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="card-glow overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="image3.jpg" alt="Loyiha 3" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-yellow-400">O'quv markaz uchun smd post</h3>
+                        <p class="text-gray-400 mb-4">Mutqin academy uchun telegram post dizayni</p>
+                        <a href="image3.jpg" target="_blank" class="btn-glow text-sm w-full text-center">
+                            <i class="fas fa-eye mr-2"></i>Ko'rish
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="card-glow overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="image4.jpg" alt="Loyiha 4" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-yellow-400">Ichimlik dizayni</h3>
+                        <p class="text-gray-400 mb-4">Mashhur ichimlik uchun reklama dizayn</p>
+                        <a href="image4.jpg" target="_blank" class="btn-glow text-sm w-full text-center">
+                            <i class="fas fa-eye mr-2"></i>Ko'rish
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="card-glow overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="image5.jpg" alt="Loyiha 5" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-yellow-400">Sunniva ichimligi dizayni</h3>
+                        <p class="text-gray-400 mb-4">Reklama dizayn</p>
+                        <a href="image5.jpg" target="_blank" class="btn-glow text-sm w-full text-center">
+                            <i class="fas fa-eye mr-2"></i>Ko'rish
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="card-glow overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="image6.jpg" alt="Loyiha 6" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-yellow-400">O'quv markaz uchun smd post</h3>
+                        <p class="text-gray-400 mb-4">SMD POST</p>
+                        <a href="image6.jpg" target="_blank" class="btn-glow text-sm w-full text-center">
+                            <i class="fas fa-eye mr-2"></i>Ko'rish
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="aloqa" class="py-20 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">
+                    <span class="gold-gradient">Aloqa</span>
+                </h2>
+                <p class="text-xl text-gray-400">Loyihangiz haqida gaplashish uchun bog'laning</p>
+            </div>
+            
+            <form action="https://formspree.io/f/xdaknlgj" method="POST" class="card-glow p-8 space-y-6">
+                <div>
+                    <label class="block text-gray-300 mb-2 font-semibold">
+                        <i class="fas fa-user mr-2 text-yellow-400"></i>Ismingiz
+                    </label>
+                    <input type="text" name="name" required placeholder="Ismingizni kiriting" class="w-full px-4 py-3 bg-white/5 border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-400 text-white">
+                </div>
+                <div>
+                    <label class="block text-gray-300 mb-2 font-semibold">
+                        <i class="fas fa-envelope mr-2 text-yellow-400"></i>Email
+                    </label>
+                    <input type="email" name="email" required placeholder="Email manzilingizni kiriting" class="w-full px-4 py-3 bg-white/5 border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-400 text-white">
+                </div>
+                <div>
+                    <label class="block text-gray-300 mb-2 font-semibold">
+                        <i class="fas fa-comment mr-2 text-yellow-400"></i>Xabar
+                    </label>
+                    <textarea name="message" required rows="6" placeholder="Xabaringizni yozing..." class="w-full px-4 py-3 bg-white/5 border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-400 text-white resize-none"></textarea>
+                </div>
+                <button type="submit" class="btn-glow w-full">
+                    <i class="fas fa-paper-plane mr-2"></i>Xabar Yuborish
+                </button>
+            </form>
+            
+            <div class="mt-12 flex justify-center flex-wrap gap-4">
+                <a href="#" class="w-14 h-14 bg-white/5 border border-yellow-400/30 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-black transition-all duration-300">
+                    <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a href="#" class="w-14 h-14 bg-white/5 border border-yellow-400/30 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-black transition-all duration-300">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="w-14 h-14 bg-white/5 border border-yellow-400/30 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-black transition-all duration-300">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" class="w-14 h-14 bg-white/5 border border-yellow-400/30 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-black transition-all duration-300">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="#" class="w-14 h-14 bg-white/5 border border-yellow-400/30 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-black transition-all duration-300">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="https://t.me/Az1zbek_Designer" target="_blank" class="w-14 h-14 bg-white/5 border border-yellow-400/30 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-black transition-all duration-300">
+                    <i class="fab fa-telegram-plane text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Player -->
+    <div class="fixed bottom-6 left-6 z-50">
+        <div class="card-glow p-3 rounded-full flex items-center space-x-3">
+            <button id="music-btn" class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center hover:scale-110 transition-all">
+                <i id="music-icon" class="fas fa-play text-black"></i>
+            </button>
+            <span class="text-sm text-gray-300 pr-2 hidden md:inline">Azizbek Abdunazarov</span>
+        </div>
+        <audio id="bg-audio" loop>
+            <source src="music1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">&copy; 2025 Azizbek Abdunazarov. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Particles
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 10 + 's';
+            particlesContainer.appendChild(particle);
+        }
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Music Player
+        const audio = document.getElementById('bg-audio');
+        const musicBtn = document.getElementById('music-btn');
+        const musicIcon = document.getElementById('music-icon');
+
+        musicBtn.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                musicIcon.classList.remove('fa-play');
+                musicIcon.classList.add('fa-pause');
+            } else {
+                audio.pause();
+                musicIcon.classList.remove('fa-pause');
+                musicIcon.classList.add('fa-play');
+            }
+        });
+    </script>
+    <script src="//code.tidio.co/pwyo0s2xslyb5yayen72hx7psixmcoko.js" async></script>
+</body>
+</html>
